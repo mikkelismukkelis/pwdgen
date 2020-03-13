@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+    <link href="css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <title>Password generator</title>
+
+  </head>
+  
+  <body class="text-center">
+
+    <div class="container">
+
+      <div class="row justify-content-md-center">
+
+<!-- RANDOM password generator -->
+        <div class="col-md-5">
+
+          <form class="form-pwdgen">
+            
+
+            <div class="value">Password length: 14</div>
+            <input  id="pwdLength" type="range" min="1" max="100" step="1" value="14">
+
+
+
+
+            <input id="randomPassword" class="form-control" placeholder="Password" readonly>
+            
+            <button class="btn btn-lg btn-primary btn-block" id="generateBtn" type="button">Generate</button>
+            <button class="btn btn-lg btn-primary btn-block" id="copyBtn" type="button">Copy to clipboard</button>
+
+            <button class="btn btn-sm btn-primary btn-block" id="settingsBtn" type="button">Settings <i class="fas fa-angle-double-down"></i> </button>
+
+            <div class="container" id="settingsDiv" hidden>
+              <div class="checkbox mb-3 text-left">
+                <label>
+                  <input type="checkbox" name="characters" checked> Include small letters<br>
+                  <input type="checkbox" name="characters" checked> Include capital letters<br>
+                  <input type="checkbox" name="characters" checked> Include numbers<br>
+                  <input type="checkbox" name="characters" checked> Include special characters<br>
+                </label>
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+<!-- ALERT -->
+
+        <div class="col-md-2 my-auto">
+          <div class="alert alert-info" id="copyOkAlert">Password copied to clipboard</div>
+        </div>
+
+<!-- WORDS password generator -->
+
+        <div class="col-md-5" id="passwordWordsDiv">
+          <form class="form-pwdgen">
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="langSelection">Language</label>
+              </div>
+              <select class="custom-select" id="langSelection">
+                <option selected value="FI">Finnish</option>
+                <option value="EN">English</option>
+              </select>
+            </div>
+
+
+            <input id="wordsPassword" class="form-control" placeholder="Password" readonly>
+            
+            <button class="btn btn-lg btn-primary btn-block" id="generateBtnWords" type="button">Generate</button>
+            <button class="btn btn-lg btn-primary btn-block" id="copyBtnWords" type="button">Copy to clipboard</button>
+
+          </form>
+        </div> <!--second column-->
+      </div> <!--ROW-->
+    </div> <!--whole container-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js" async defer></script>
+  </body>
+
+</html>
